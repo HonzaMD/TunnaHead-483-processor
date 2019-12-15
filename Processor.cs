@@ -17,7 +17,7 @@ namespace Hradla
 
         public Processor(Component[] components)
         {
-            Console.WriteLine($"> Processor 483 with {components.Length} logical components READY");
+            Console.WriteLine($"> Processor 483 'TunnaHead' with {components.Length} logical components READY");
             this.components = components;
             toCompute = new HashSet<Component>(components);
             this.oscilators = components.Select(c => c as Oscilator).Where(c => c != null).ToArray();
