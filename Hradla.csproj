@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E36235E9-57B3-479E-B0B9-8FD81A6CEC4B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Hradla</RootNamespace>
+    <AssemblyName>Hradla</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Asm\Assembler.cs" />
+    <Compile Include="Asm\Code.cs" />
+    <Compile Include="Asm\DebugInstrReader.cs" />
+    <Compile Include="Asm\Fibonacci.cs" />
+    <Compile Include="Asm\QuickSort.cs" />
+    <Compile Include="Asm\Hadani.cs" />
+    <Compile Include="Asm\FirstProgram.cs" />
+    <Compile Include="Asm\Parameters.cs" />
+    <Compile Include="Component.cs" />
+    <Compile Include="Components\Xor.cs" />
+    <Compile Include="Components\Led.cs" />
+    <Compile Include="Components\Byte.cs" />
+    <Compile Include="Components\Bit.cs" />
+    <Compile Include="Components\Not.cs" />
+    <Compile Include="Components\Cross.cs" />
+    <Compile Include="Components\Or.cs" />
+    <Compile Include="Components\NAnd.cs" />
+    <Compile Include="Components\And.cs" />
+    <Compile Include="Components\Oscilator.cs" />
+    <Compile Include="Definition.cs" />
+    <Compile Include="DefinitionParser.cs" />
+    <Compile Include="Definitions\Flags.cs" />
+    <Compile Include="Definitions\Shl.cs" />
+    <Compile Include="Definitions\ChangeState.cs" />
+    <Compile Include="Definitions\ALU.cs" />
+    <Compile Include="Definitions\IfJumps.cs" />
+    <Compile Include="Definitions\Processor.cs" />
+    <Compile Include="Definitions\IncByte.cs" />
+    <Compile Include="Definitions\Multiplex.cs" />
+    <Compile Include="Definitions\InstrDecoder.cs" />
+    <Compile Include="Definitions\DeMultiplex.cs" />
+    <Compile Include="Definitions\Register.cs" />
+    <Compile Include="Definitions\Add.cs" />
+    <Compile Include="Definitions\Memory.cs" />
+    <Compile Include="Led8Monitor.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="Pin.cs" />
+    <Compile Include="Processor.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Wire.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
