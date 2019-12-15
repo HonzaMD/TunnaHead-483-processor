@@ -36,7 +36,7 @@ Or c 8
 
 + borrow xorC[0].I2
 + borrow andC[0].I2
-+ c[8].O carry
++ c[7].O carry
 
                 "};
     }

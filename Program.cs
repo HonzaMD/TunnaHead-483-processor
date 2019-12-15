@@ -103,7 +103,7 @@ Memory mem
             var instrDecoder = new DebugInstrReader(mem, ip, state);
 
 
-            var prg = new QuickSort();
+            var prg = new Multiply4Bytes();
             prg.Build(mem);
 
             bool stepByStep = true;

@@ -32,7 +32,7 @@ Xor xorC 8
 + xorC[m].O O[m]
 ```
 
-## Assmebler support and samples
+## Assembler support and samples
 
 ```csharp
     class Fibonacci : Assembler

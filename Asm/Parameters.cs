@@ -21,7 +21,7 @@ namespace Hradla.Asm
         public Code AsP3 => (Code)((byte)Code << 4);
         public Code AsP2 => Code == PrmCode.AR ? Asm.Code.AR2 : Code == PrmCode.BR ? Asm.Code.BR2 : throw new InvalidOperationException("nepoveleny prevod");
 
-        public static implicit operator AllParameters(byte data) => new IdPrm() { Data = data };
+        public static implicit operator AllParameters(int data) => new IdPrm() { Data = data };
         public static implicit operator AllParameters(string label) => new IdPrm() { Label = label };
     }
 
@@ -32,7 +32,7 @@ namespace Hradla.Asm
         public string Label;
         public int Delta;
 
-        public static implicit operator IdPrm(byte data) => new IdPrm() { Data = data };
+        public static implicit operator IdPrm(int data) => new IdPrm() { Data = data };
         public static implicit operator IdPrm(string label) => new IdPrm() { Label = label };
     }
 

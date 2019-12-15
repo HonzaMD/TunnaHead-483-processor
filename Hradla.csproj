@@ -45,6 +45,7 @@
     <Compile Include="Asm\Assembler.cs" />
     <Compile Include="Asm\Code.cs" />
     <Compile Include="Asm\DebugInstrReader.cs" />
+    <Compile Include="Asm\Multiply4Bytes.cs" />
     <Compile Include="Asm\Fibonacci.cs" />
     <Compile Include="Asm\QuickSort.cs" />
     <Compile Include="Asm\Hadani.cs" />

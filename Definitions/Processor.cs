@@ -220,6 +220,8 @@ ALU alu
 Flags flags
 + AOUT[m] flags.AOUT[m]
 + alu.Carry flags.carry
++ flags.O[3] alu.Burrow
++ flags.O[5] alu.BurrowEnable
 + State.O[2] flags.W
 + decoder.SpCode[0] flags.SetDSF
 + decoder.SpCode[1] flags.SetBrw
